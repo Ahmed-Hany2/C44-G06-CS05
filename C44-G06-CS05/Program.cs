@@ -7,7 +7,7 @@ namespace C44_G06_CS05
         static void Main(string[] args)
         {
             //1 - .Write a program that prints an identity matrix using for loop, in other
-            //words takes a value n from the user and shows the identity table of size n *
+            //words takes a value n from the user and shows the identity table of size n * 
             //n.
 
             Console.Write("Enter the size of the identity matrix (n): ");
