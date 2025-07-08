@@ -78,6 +78,25 @@ namespace C44_G06_CS05
             Console.WriteLine($"\nMaximum element in the array: {max}");
             Console.WriteLine($"Minimum element in the array: {min}");
 
+            //5 - Write a program in C# Sharp to find the second largest element in an
+            //array.
+            int[] arr3 = new int[] { 12, 35, 1, 10, 34,36, 1 };
+            int first = arr3[0];
+            int second = arr3[0];
+            for (int i = 0; i < arr3.Length; i++)
+            {
+                if (arr3[i] > first)
+                {
+                    second = first;
+                    first = arr3[i];
+                }
+                else if (arr3[i] > second && arr3[i] != first)
+                {
+                    second = arr3[i];
+                }
+            }
+            Console.WriteLine($"\nThe Second largest element in the array: { second} ");
+
         }
     }
 }
