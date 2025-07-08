@@ -42,6 +42,25 @@ namespace C44_G06_CS05
             }
             Console.WriteLine($"\nThe Sum of all elements in the array: {sum}");
 
+            //3 - Write a program in C# Sharp to merge two arrays of the same size sorted in
+            //ascending order.
+            int[] arr1 = new int[] { 1, 3, 5, 7 };
+            int[] arr2 = new int[] { 2, 4, 6, 8 };
+            int[] mergedArray = new int[arr1.Length + arr2.Length];
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                mergedArray[i] = arr1[i];
+            }
+            for (int i = 0; i < arr2.Length; i++)
+            {
+                mergedArray[arr1.Length + i] = arr2[i];
+            }
+            Array.Sort(mergedArray);
+            Console.WriteLine("\nMerged and sorted array: ");
+            foreach (int num in mergedArray)
+            {
+                Console.Write(num + " ");
+            }
 
         }
     }
