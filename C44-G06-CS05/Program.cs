@@ -1,5 +1,8 @@
 ﻿using System.ComponentModel;
 using System.Drawing;
+using System.Net.NetworkInformation;
+using System.Xml.Linq;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace C44_G06_CS05
 {
@@ -129,9 +132,43 @@ namespace C44_G06_CS05
             Array.Reverse(words);
             string reversedWords = string.Join(" ", words);
             Console.WriteLine($"Reversed words: {reversedWords}");
-         
-            
 
+            //8 - Write a program to create two multidimensional arrays of same size. Accept
+            //value from user and store them in first array. Now copy all the elements of
+            //first array on second array and print second array.
+
+            Console.Write("Enter the number of rows for the multidimensional array: ");
+            int rows = int.Parse(Console.ReadLine());
+            Console.Write("\nEnter the number of columns for the multidimensional array: ");
+            int cols = int.Parse(Console.ReadLine());
+            int[,] firstArray = new int[rows, cols];
+            int[,] secondArray = new int[rows, cols];
+            Console.WriteLine("\nEnter the elements of the first array:");
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                   int.TryParse(Console.ReadLine(), out firstArray[i, j]);
+                    
+                }
+            }
+            
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    secondArray[i, j] = firstArray[i, j];
+                }
+            }
+            Console.WriteLine("\nElements of the second array:");
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < cols; j++)
+                {
+                    Console.Write(secondArray[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
