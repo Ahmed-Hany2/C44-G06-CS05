@@ -97,6 +97,30 @@ namespace C44_G06_CS05
             }
             Console.WriteLine($"\nThe Second largest element in the array: { second} ");
 
+            //6 -.Consider an Array of Integer values with size N, having values as
+            //in this Example
+
+            Console.Write("Enter the array elements separated by spaces: ");
+            int[] arr4 = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
+
+            int maxDistance = 0;
+
+            for (int i = 0; i < arr4.Length; i++)
+            {
+                for (int j = i + 1; j < arr4.Length; j++)
+                {
+                    if (arr4[i] == arr4[j])
+                    {
+                        int distance = j - i - 1; 
+                        if (distance > maxDistance)
+                        {
+                            maxDistance = distance;
+                        }
+                    }
+                }
+            }
+            Console.WriteLine($"The longest distance between two equal values is: {maxDistance}");
+
         }
     }
 }
