@@ -169,6 +169,16 @@ namespace C44_G06_CS05
                 }
                 Console.WriteLine();
             }
+
+            //9 - Write a Program to Print One Dimensional Array in Reverse Order
+            int[] arr5 = { 1, 2, 3, 4, 5 };
+            Array.Reverse(arr5);
+            Console.WriteLine("\nThe array in Reverse Order: ");
+            foreach (int num in arr5)
+            {
+                Console.Write(num + " ");
+            }
+
         }
     }
 }
