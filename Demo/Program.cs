@@ -96,6 +96,27 @@
             jaggedArray[0] = [ 1, 2, 3 , 5, 7];
             #endregion
 
+            #region Array Mrthods
+            int[] numbers05 = { 7, 4, 3, 2, 0, 1, 0, 9, 8 };
+            Array.Sort(numbers05);
+            Array.Reverse(numbers05);
+            Array.Clear(numbers05, 0, 3);
+            Console.WriteLine(Array.IndexOf(numbers05, 0));
+            Console.WriteLine(Array.LastIndexOf(numbers05, 0));
+            Array.Resize(ref numbers05, 20);
+
+            foreach (var item in numbers05)
+            {
+                Console.WriteLine(item);
+            }
+
+            int[] numbers06 = new int [4];
+            Array.Copy(numbers05, numbers06, 4);
+            foreach (var item in numbers06)
+            {
+                Console.WriteLine(item);
+            }
+            #endregion
 
 
 
