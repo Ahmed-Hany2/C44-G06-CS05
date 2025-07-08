@@ -121,6 +121,17 @@ namespace C44_G06_CS05
             }
             Console.WriteLine($"The longest distance between two equal values is: {maxDistance}");
 
+            //7 - Given a list of space separated words, reverse the order of the words.
+       
+            Console.Write("Enter a list of words: ");
+            string input = Console.ReadLine();
+            string[] words = input.Split(' ');
+            Array.Reverse(words);
+            string reversedWords = string.Join(" ", words);
+            Console.WriteLine($"Reversed words: {reversedWords}");
+         
+            
+
         }
     }
 }
