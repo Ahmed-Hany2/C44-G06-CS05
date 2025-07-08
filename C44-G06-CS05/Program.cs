@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.ComponentModel;
+using System.Drawing;
 
 namespace C44_G06_CS05
 {
@@ -28,6 +29,19 @@ namespace C44_G06_CS05
                 }
                 Console.WriteLine();
             }
+
+            //2 - Write a program in C# Sharp to find the sum of all elements of the array.
+            int[] arr = new int[]
+            {
+                1, 7, 8, 4, 2, 5
+            };
+            int sum = 0;
+            foreach (int num in arr)
+            {
+                sum += num;
+            }
+            Console.WriteLine($"\nThe Sum of all elements in the array: {sum}");
+
 
         }
     }
